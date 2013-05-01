@@ -4,9 +4,14 @@ In order to compile and run this demo, you need three things:
 2) Data files
 3) Proper MACRO defines in Eclipse build properties
 
-The project files should be in this directory, and are usually in a tarball called websdemo.tgz.
+The project files should be in this directory, and are usually in a tarball 
+called websdemo.tgz.
 
-The data files are in a tarball called websdemo-data.tgz.  These need to be in the directory from which websdemo is executed.  In one version kicking around, I had modified the startup (main() IIRC) to use /apps or something similar.  Anyway, the web server needs to be able to access the data pages, of course.
+The data files are in a tarball called websdemo-data.tgz.  These need to be
+in the directory from which websdemo is executed.  In one version kicking
+around, I had modified the startup (main() IIRC) to use /apps or
+something similar.  Anyway, the web server needs to be able to access
+the data pages, of course.
 
 The MACRO defines (-Dxyz) are placed in project properties as follows:
 Under Projec->Properties->C/C++ Build->Settings, in the Tool Settings tab, select "Symbols" and add the following:
@@ -20,7 +25,10 @@ OS=LINUX
 
 This should cause it to compile correctly.
 
-With your data files in /apps/webs on the target, it should serve pages from there.
+With your data files in /apps/webs on the target, it should serve pages
+from there. Note that you also need to have an entry in /etc/hosts containing
+the hostname of the target and it's IP address.  Bug somewhere, this hack
+makes it work.
 
 
 
