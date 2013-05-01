@@ -1,0 +1,6 @@
+#launch snmpd on target
+#On host:
+snmpget cllf860dt public system.sysUpTime.0 
+
+#will display the time since you started snmpd.
+
