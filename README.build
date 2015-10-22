@@ -1,8 +1,10 @@
-In order to compile and run this demo, you need three things:
+In order to compile and run this demo, you need four things:
 
 1) Project source files
 2) Data files
 3) Proper MACRO defines in Eclipse build properties
+4) Add an include path point to the "include" directory in the project
+    ie. "${workspace_loc:/${ProjName}/include}"
 
 The project files should be in this directory, and are usually in a tarball 
 called websdemo.tgz.
