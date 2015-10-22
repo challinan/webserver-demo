@@ -1,19 +1,16 @@
-In order to compile and run this demo, you need four things:
+In order to compile and run this demo, you need three things:
 
 1) Project source files
 2) Data files
 3) Proper MACRO defines in Eclipse build properties
-4) Add an include path point to the "include" directory in the project
-    ie. "${workspace_loc:/${ProjName}/include}"
 
 The project files should be in this directory, and are usually in a tarball 
 called websdemo.tgz.
 
 The data files are in a tarball called websdemo-data.tgz.  These need to be
-in the directory from which websdemo is executed.  In one version kicking
-around, I had modified the startup (main() IIRC) to use /apps or
-something similar.  Anyway, the web server needs to be able to access
-the data pages, of course.
+in a directory called /apps on the target.  scp the websdemo-data.tgz file to the target and untar it in /apps.  So under /apps you have /apps/web which contains the data files to be served by the webserver.
+
+Be sure no other server/service is occupying port 80 on your target.  Some version of busybox have busybox-httpd running on port 80.
 
 The MACRO defines (-Dxyz) are placed in project properties as follows:
 Under Projec->Properties->C/C++ Build->Settings, in the Tool Settings tab, select "Symbols" and add the following:
